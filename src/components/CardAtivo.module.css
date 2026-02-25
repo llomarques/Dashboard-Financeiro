@@ -1,0 +1,57 @@
+.card {
+  background-color: var(--fundo-card);
+  background: linear-gradient(135deg, #1c2a38 0%, #162030 100%);
+  border: 1px solid var(--borda);
+  border-radius: 16px;
+  box-shadow: var(--sombra-card);
+  padding: 28px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--destaque), transparent);
+  border-radius: 16px 16px 0 0;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
+}
+
+.titulo {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--texto-secundario);
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--borda);
+}
+
+.conteudo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.conteudo p {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: var(--texto-primario);
+  letter-spacing: -0.01em;
+}
+
+.conteudo span {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
